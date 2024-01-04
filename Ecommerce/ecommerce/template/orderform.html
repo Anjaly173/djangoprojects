@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="conatiner-fluid mt-5" style="margin-bottom:60px;">
+<h2>Enter the Order Details</h2>
+<form method="POST">
+    {% csrf_token %}
+  <div class="mb-3">
+  <label  class="form-label">Address</label>
+  <input type="text" class="form-control" name="a"  placeholder="Enter the address">
+</div>
+
+    <div class="mb-3">
+  <label  class="form-label">Phone</label>
+  <input type="number" class="form-control"name="p"  placeholder="Enter the number">
+</div>
+    <div class="mb-3">
+  <label  class="form-label">Account no</label>
+  <input type="number" class="form-control"name="n" placeholder="Enter the Account no">
+</div>
+    <div class="mb-3">
+  <input type="submit" class="form-control">
+</div>
+    </div>
+{% endblock %}
